@@ -1,0 +1,101 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Allow scrolling */
+body, html {
+    background: #f9f8f9;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding-bottom: 60px; /* Space for footer */
+}
+
+/* Home Page */
+.home-page {
+    width: 100%;
+    max-width: 100%; /* Ensures full width */
+    /* padding: 20px; */
+    text-align: center;
+}
+/* Carousel */
+.carousel {
+    width: 100vw;  /* Full width of viewport */
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Carousel Images */
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit properly */
+}
+
+/* Products Page */
+.products-container {
+    text-align: center;
+    padding: 30px;
+    background: url('/images/background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0D4879; /* Ensures navbar is visible */
+    z-index: 1000;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #0D4879;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-page {
+        padding: 10px;
+    }
+
+    .carousel {
+        height: 300px; /* Adjust for smaller screens */
+    }
+}

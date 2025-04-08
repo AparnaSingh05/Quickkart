@@ -1,0 +1,111 @@
+/* Full-Width Carousel */
+.carousel-container {
+    width: 100vw;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Ensure Each Slide is Full Width */
+.slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    margin: 0;
+}
+
+/* Ensure Images Take Full Width */
+.carousel-image {
+    display: block;
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Welcome Text Overlay */
+.carousel-overlay {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    z-index: 10;
+    color: white;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Typewriter Text Effect */
+.typewriter-text {
+    display: inline-block;
+    border-right: 3px solid white; /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Fix Flickering on Transitions */
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+/* Navigation Arrows */
+.slick-prev, .slick-next {
+    z-index: 10;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #f4a261;
+    font-size: 30px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+    opacity: 1;
+}
+
+/* Dots Styling */
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: white;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #f4a261;
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 300px;
+    }
+    .carousel-overlay {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-image {
+        height: 250px;
+    }
+    .carousel-overlay {
+        font-size: 1.8rem;
+    }
+}
